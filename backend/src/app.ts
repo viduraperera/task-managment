@@ -3,6 +3,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -11,6 +12,15 @@ import authRoutes from './routes/auth';
 import taskRoutes from './routes/tasks';
 
 const app = express();
+
+// Configure CORS
+const corsOptions = {
+    origin: '*',
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: ['Content-Type', 'Authorization', 'noAuth'],
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
