@@ -40,7 +40,7 @@ npm install
     Create a .env file in the root of the backend directory with the following content:
 
     ```bash
-    MONGO_URI=mongodb+srv://test:sampletest@usertasks.gumtdg7.mongodb.net/?retryWrites=true&w=majority&appName=UserTasks
+    MONGO_URI=mongoDB_URL
     JWT_SECRET=your_jwt_secret
     PORT=5000
     ```
